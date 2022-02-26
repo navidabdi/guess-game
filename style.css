@@ -19,11 +19,12 @@ body {
 }
 .container h1 {
   color: #1976d2;
-  margin-bottom: 30px;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  padding: 30px;
 }
-.game-con {
-  width: 300px;
+.game-con,
+.results {
+  width: 350px;
   height: 200px;
   display: flex;
   justify-content: space-around;
@@ -31,6 +32,9 @@ body {
   background-color: white;
   border-radius: 5px;
   padding: 20px;
+}
+.results {
+  margin-top: 20px;
 }
 .game-con h2 {
   text-align: center;
@@ -54,18 +58,18 @@ button {
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
+  width: 49%;
 }
-.results {
-  width: 300px;
-  height: 200px;
+.btns {
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
 }
+.reset {
+  background-color: #cccccc;
+  color: #094069;
+}
+
 .results h3 {
   color: #01579b;
   font-size: 0.9rem;
@@ -87,4 +91,7 @@ button {
 }
 .won {
   color: #4caf50;
+}
+p.user-guess {
+  word-break: break-word;
 }
