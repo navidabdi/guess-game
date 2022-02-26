@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>Guess A Number From 1 to 6 For Wining!</h1>
+      <h1>Guess A Number From 1 to 100 For Wining!</h1>
       <div class="game-con">
         <h2>Guess Game</h2>
         <input
@@ -19,9 +19,7 @@
           type="number"
           placeholder="Put Your Guess Here!"
         />
-        <button onClick="onClick()" class="sumbit-guess" value="">
-          Submit
-        </button>
+        <button class="sumbit-guess" value="">Submit</button>
       </div>
       <!-- <div class="results">
             <div class="won-lose">
@@ -44,6 +42,15 @@
                 <p class="totalLoseDom"></p>
             </div>
         </div> -->
+      <div class="results">
+        <div class="won-lose">
+          <h2></h2>
+        </div>
+        <div class="usersGuess">
+          <h3>Your Guess:</h3>
+          <p class="user-guess"></p>
+        </div>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>

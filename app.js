@@ -50,3 +50,38 @@
 // btn.addEventListener('click',()=>{
 //     guessGame();
 // })
+
+let randNumber = Math.floor(Math.random() * 100) + 1;
+let userGuess = document.getElementById('userGuess');
+let userGuessDom = document.querySelector('.user-guess');
+let gameNumDom = document.querySelector('.game-nubmer');
+let showWonOrLose = document.querySelector('.won-lose h2');
+let sumbitGuess = document.querySelector('.sumbit-guess');
+let userGuessNumber;
+console.log(randNumber);
+userGuess.addEventListener('change', (e) => {
+  //   console.log(e);
+  userGuessNumber = e.target.value;
+});
+sumbitGuess.addEventListener('click', (event) => {
+  checkTheGess(randNumber, userGuessNumber);
+
+  //   console.log(randNumber);
+});
+
+function checkTheGess(randNumber, userGuessNumber) {
+  if (userGuessNumber == randNumber) {
+    showWonLose('Your Gess Is True!');
+    // return true;
+  } else if (userGuessNumber > randNumber) {
+    showWonLose('Your Gess Is Higher!');
+    // return false;
+  } else {
+    showWonLose('Your Gess Is Lower!');
+    // return false;
+  }
+}
+function showWonLose(message) {
+  showWonOrLose.innerText = message;
+}
+// showWonOrLose = 'message';
